@@ -5,7 +5,7 @@
 -- Dumped from database version 17.5 (Postgres.app)
 -- Dumped by pg_dump version 17.5
 
--- Started on 2025-08-12 14:45:01 CEST
+-- Started on 2025-08-12 14:50:03 CEST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -67,7 +67,7 @@ CREATE SEQUENCE public.categories_category_id_seq
 ALTER SEQUENCE public.categories_category_id_seq OWNER TO postgres;
 
 --
--- TOC entry 3713 (class 0 OID 0)
+-- TOC entry 3704 (class 0 OID 0)
 -- Dependencies: 218
 -- Name: categories_category_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -109,7 +109,7 @@ CREATE SEQUENCE public.customer_customer_id_seq
 ALTER SEQUENCE public.customer_customer_id_seq OWNER TO postgres;
 
 --
--- TOC entry 3714 (class 0 OID 0)
+-- TOC entry 3705 (class 0 OID 0)
 -- Dependencies: 222
 -- Name: customer_customer_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -155,7 +155,7 @@ CREATE SEQUENCE public.orders_order_id_seq
 ALTER SEQUENCE public.orders_order_id_seq OWNER TO postgres;
 
 --
--- TOC entry 3715 (class 0 OID 0)
+-- TOC entry 3706 (class 0 OID 0)
 -- Dependencies: 224
 -- Name: orders_order_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -198,7 +198,7 @@ CREATE SEQUENCE public.products_product_id_seq
 ALTER SEQUENCE public.products_product_id_seq OWNER TO postgres;
 
 --
--- TOC entry 3716 (class 0 OID 0)
+-- TOC entry 3707 (class 0 OID 0)
 -- Dependencies: 220
 -- Name: products_product_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -236,94 +236,6 @@ ALTER TABLE ONLY public.orders ALTER COLUMN order_id SET DEFAULT nextval('public
 --
 
 ALTER TABLE ONLY public.products ALTER COLUMN product_id SET DEFAULT nextval('public.products_product_id_seq'::regclass);
-
-
---
--- TOC entry 3699 (class 0 OID 16391)
--- Dependencies: 217
--- Data for Name: FruitJuice; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY public."FruitJuice" (id, name, price) FROM stdin;
-1	OrangeJuice	100
-2	AppleJuice	200
-\.
-
-
---
--- TOC entry 3701 (class 0 OID 16397)
--- Dependencies: 219
--- Data for Name: categories; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY public.categories (category_id, name) FROM stdin;
-\.
-
-
---
--- TOC entry 3705 (class 0 OID 16419)
--- Dependencies: 223
--- Data for Name: customer; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY public.customer (customer_id, customer_name, email, phone_number, address, city) FROM stdin;
-\.
-
-
---
--- TOC entry 3707 (class 0 OID 16428)
--- Dependencies: 225
--- Data for Name: orders; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY public.orders (order_id, customer_id, product_id, total_quantity, total_amount, order_rating, length, width, order_timestamp, delivery_timestamp) FROM stdin;
-\.
-
-
---
--- TOC entry 3703 (class 0 OID 16404)
--- Dependencies: 221
--- Data for Name: products; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY public.products (product_id, name, price, description, tags, category_id, supplier) FROM stdin;
-\.
-
-
---
--- TOC entry 3717 (class 0 OID 0)
--- Dependencies: 218
--- Name: categories_category_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.categories_category_id_seq', 1, false);
-
-
---
--- TOC entry 3718 (class 0 OID 0)
--- Dependencies: 222
--- Name: customer_customer_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.customer_customer_id_seq', 1, false);
-
-
---
--- TOC entry 3719 (class 0 OID 0)
--- Dependencies: 224
--- Name: orders_order_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.orders_order_id_seq', 1, false);
-
-
---
--- TOC entry 3720 (class 0 OID 0)
--- Dependencies: 220
--- Name: products_product_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.products_product_id_seq', 1, false);
 
 
 --
@@ -398,7 +310,7 @@ ALTER TABLE ONLY public.products
     ADD CONSTRAINT products_category_id_fkey FOREIGN KEY (category_id) REFERENCES public.categories(category_id);
 
 
--- Completed on 2025-08-12 14:45:01 CEST
+-- Completed on 2025-08-12 14:50:03 CEST
 
 --
 -- PostgreSQL database dump complete
