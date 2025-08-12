@@ -5,7 +5,7 @@
 -- Dumped from database version 17.5 (Postgres.app)
 -- Dumped by pg_dump version 17.5
 
--- Started on 2025-08-12 14:50:03 CEST
+-- Started on 2025-08-12 18:32:25 CEST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -310,7 +310,7 @@ ALTER TABLE ONLY public.products
     ADD CONSTRAINT products_category_id_fkey FOREIGN KEY (category_id) REFERENCES public.categories(category_id);
 
 
--- Completed on 2025-08-12 14:50:03 CEST
+-- Completed on 2025-08-12 18:32:25 CEST
 
 --
 -- PostgreSQL database dump complete
