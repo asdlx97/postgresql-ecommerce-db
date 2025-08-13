@@ -5,7 +5,7 @@
 -- Dumped from database version 17.5 (Postgres.app)
 -- Dumped by pg_dump version 17.5
 
--- Started on 2025-08-12 18:32:43 CEST
+-- Started on 2025-08-13 14:03:53 CEST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -41,6 +41,7 @@ COPY public.categories (category_id, name) FROM stdin;
 1	Electronics
 2	Clothing
 3	Home and Kitchen
+4	Entertainment
 \.
 
 
@@ -69,9 +70,10 @@ COPY public.customer (customer_id, customer_name, email, phone_number, address, 
 COPY public.products (product_id, name, price, description, tags, category_id, supplier) FROM stdin;
 1	Laptop	\N	High-performance laptop for professionals	electronics, portable, tech	1	SupplierA
 2	Headphones	129.99	Over-ear wireless headphones	electronics, audio, accessories	1	SupplierB
-3	Backpack	49.99	Stylish and durable backpack for everyday use	fashion, accessories, travel	2	NULL
 4	Coffee Maker	\N	Automatic drip coffee maker with programmable timer	home, kitchen, appliances	3	NULL
 5	Fitness Tracker	79.99	Water-resistant fitness tracker with heart rate monitor	electronics, fitness, wearables	1	NULL
+3	Backpack	84.99	Stylish and durable backpack for everyday use	fashion, accessories, travel	2	NULL
+6	Book	19.99	Lord Of The Rings	entertainment, literature	4	Supplier C
 \.
 
 
@@ -125,7 +127,7 @@ SELECT pg_catalog.setval('public.orders_order_id_seq', 4, true);
 SELECT pg_catalog.setval('public.products_product_id_seq', 5, true);
 
 
--- Completed on 2025-08-12 18:32:44 CEST
+-- Completed on 2025-08-13 14:03:53 CEST
 
 --
 -- PostgreSQL database dump complete
