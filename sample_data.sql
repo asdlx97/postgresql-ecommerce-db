@@ -5,7 +5,7 @@
 -- Dumped from database version 17.5 (Postgres.app)
 -- Dumped by pg_dump version 17.5
 
--- Started on 2025-08-13 14:03:53 CEST
+-- Started on 2025-08-13 14:54:57 CEST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -74,6 +74,7 @@ COPY public.products (product_id, name, price, description, tags, category_id, s
 5	Fitness Tracker	79.99	Water-resistant fitness tracker with heart rate monitor	electronics, fitness, wearables	1	NULL
 3	Backpack	84.99	Stylish and durable backpack for everyday use	fashion, accessories, travel	2	NULL
 6	Book	19.99	Lord Of The Rings	entertainment, literature	4	Supplier C
+7	Ipad	100.00	High-performance ipad for professionals	electronics, portable, tech	1	SupplierA
 \.
 
 
@@ -124,10 +125,10 @@ SELECT pg_catalog.setval('public.orders_order_id_seq', 4, true);
 -- Name: products_product_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.products_product_id_seq', 5, true);
+SELECT pg_catalog.setval('public.products_product_id_seq', 7, true);
 
 
--- Completed on 2025-08-13 14:03:53 CEST
+-- Completed on 2025-08-13 14:54:57 CEST
 
 --
 -- PostgreSQL database dump complete
