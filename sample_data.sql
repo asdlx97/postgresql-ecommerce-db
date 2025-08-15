@@ -5,7 +5,7 @@
 -- Dumped from database version 17.5 (Postgres.app)
 -- Dumped by pg_dump version 17.5
 
--- Started on 2025-08-14 10:27:07 CEST
+-- Started on 2025-08-15 17:21:08 CEST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -20,20 +20,8 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- TOC entry 3695 (class 0 OID 16391)
--- Dependencies: 217
--- Data for Name: FruitJuice; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY public."FruitJuice" (id, name, price) FROM stdin;
-1	OrangeJuice	100
-2	AppleJuice	200
-\.
-
-
---
--- TOC entry 3697 (class 0 OID 16397)
--- Dependencies: 219
+-- TOC entry 3690 (class 0 OID 16397)
+-- Dependencies: 218
 -- Data for Name: categories; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -46,8 +34,8 @@ COPY public.categories (category_id, name) FROM stdin;
 
 
 --
--- TOC entry 3701 (class 0 OID 16419)
--- Dependencies: 223
+-- TOC entry 3694 (class 0 OID 16419)
+-- Dependencies: 222
 -- Data for Name: customer; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -62,8 +50,8 @@ COPY public.customer (customer_id, customer_name, email, phone_number, address, 
 
 
 --
--- TOC entry 3699 (class 0 OID 16404)
--- Dependencies: 221
+-- TOC entry 3692 (class 0 OID 16404)
+-- Dependencies: 220
 -- Data for Name: products; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -73,14 +61,13 @@ COPY public.products (product_id, name, price, description, tags, category_id, s
 4	Coffee Maker	\N	Automatic drip coffee maker with programmable timer	home, kitchen, appliances	3	NULL
 3	Backpack	84.99	Stylish and durable backpack for everyday use	fashion, accessories, travel	2	NULL
 6	Book	19.99	Lord Of The Rings	entertainment, literature	4	Supplier C
-7	Ipad	500.00	High-performance ipad for professionals	electronics, portable, tech	1	SupplierA
 5	Fitness Tracker	109.99	Water-resistant fitness tracker with heart rate monitor	electronics, fitness, wearables	1	NULL
 \.
 
 
 --
--- TOC entry 3703 (class 0 OID 16428)
--- Dependencies: 225
+-- TOC entry 3696 (class 0 OID 16428)
+-- Dependencies: 224
 -- Data for Name: orders; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -93,8 +80,8 @@ COPY public.orders (order_id, customer_id, product_id, total_quantity, total_amo
 
 
 --
--- TOC entry 3709 (class 0 OID 0)
--- Dependencies: 218
+-- TOC entry 3702 (class 0 OID 0)
+-- Dependencies: 217
 -- Name: categories_category_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -102,8 +89,8 @@ SELECT pg_catalog.setval('public.categories_category_id_seq', 3, true);
 
 
 --
--- TOC entry 3710 (class 0 OID 0)
--- Dependencies: 222
+-- TOC entry 3703 (class 0 OID 0)
+-- Dependencies: 221
 -- Name: customer_customer_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -111,8 +98,8 @@ SELECT pg_catalog.setval('public.customer_customer_id_seq', 6, true);
 
 
 --
--- TOC entry 3711 (class 0 OID 0)
--- Dependencies: 224
+-- TOC entry 3704 (class 0 OID 0)
+-- Dependencies: 223
 -- Name: orders_order_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -120,15 +107,15 @@ SELECT pg_catalog.setval('public.orders_order_id_seq', 4, true);
 
 
 --
--- TOC entry 3712 (class 0 OID 0)
--- Dependencies: 220
+-- TOC entry 3705 (class 0 OID 0)
+-- Dependencies: 219
 -- Name: products_product_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
 SELECT pg_catalog.setval('public.products_product_id_seq', 7, true);
 
 
--- Completed on 2025-08-14 10:27:07 CEST
+-- Completed on 2025-08-15 17:21:08 CEST
 
 --
 -- PostgreSQL database dump complete
