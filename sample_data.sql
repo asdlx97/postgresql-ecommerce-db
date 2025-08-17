@@ -5,7 +5,7 @@
 -- Dumped from database version 17.5 (Postgres.app)
 -- Dumped by pg_dump version 17.5
 
--- Started on 2025-08-15 17:21:08 CEST
+-- Started on 2025-08-17 09:36:51 CEST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -76,6 +76,7 @@ COPY public.orders (order_id, customer_id, product_id, total_quantity, total_amo
 2	2	2	3	75	3.8	1.50	1.20	2023-02-03 14:20:00	2023-02-05 11:10:00
 3	3	3	7	211	4.2	2.80	2.00	2023-03-12 08:45:00	2023-03-14 09:30:00
 4	1	4	2	50	4.0	1.80	1.50	2023-04-05 12:15:00	2023-04-07 18:20:00
+6	\N	5	2	400	3.5	3.10	1.70	\N	\N
 \.
 
 
@@ -103,7 +104,7 @@ SELECT pg_catalog.setval('public.customer_customer_id_seq', 6, true);
 -- Name: orders_order_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.orders_order_id_seq', 4, true);
+SELECT pg_catalog.setval('public.orders_order_id_seq', 6, true);
 
 
 --
@@ -115,7 +116,7 @@ SELECT pg_catalog.setval('public.orders_order_id_seq', 4, true);
 SELECT pg_catalog.setval('public.products_product_id_seq', 7, true);
 
 
--- Completed on 2025-08-15 17:21:08 CEST
+-- Completed on 2025-08-17 09:36:51 CEST
 
 --
 -- PostgreSQL database dump complete
