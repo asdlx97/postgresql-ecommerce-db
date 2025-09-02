@@ -5,7 +5,7 @@
 -- Dumped from database version 17.5 (Postgres.app)
 -- Dumped by pg_dump version 17.5
 
--- Started on 2025-08-17 09:36:51 CEST
+-- Started on 2025-09-02 07:49:00 CEST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -46,6 +46,7 @@ COPY public.customer (customer_id, customer_name, email, phone_number, address, 
 4	David White	david@example.com	222-333-4444	567 Maple Dr	NYC
 5	Eva Black	eva@example.com	999-888-7777	890 Cedar Rd	Big Apple
 6	Frank Green	frank@example.com	111-222-3333	123 Elm St	Gotham City
+7	Erik Bayers	erik@example.com	678-876-7898	356 Lemon Ave	Big Apple
 \.
 
 
@@ -95,7 +96,7 @@ SELECT pg_catalog.setval('public.categories_category_id_seq', 3, true);
 -- Name: customer_customer_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.customer_customer_id_seq', 6, true);
+SELECT pg_catalog.setval('public.customer_customer_id_seq', 7, true);
 
 
 --
@@ -116,7 +117,7 @@ SELECT pg_catalog.setval('public.orders_order_id_seq', 6, true);
 SELECT pg_catalog.setval('public.products_product_id_seq', 7, true);
 
 
--- Completed on 2025-08-17 09:36:51 CEST
+-- Completed on 2025-09-02 07:49:00 CEST
 
 --
 -- PostgreSQL database dump complete
